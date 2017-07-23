@@ -1,8 +1,8 @@
-infoCash development tree
+Appcoin development tree
 
-infoCash is a PoS-based cryptocurrency.
+Appcoin is a PoS-based cryptocurrency.
 
-[![Build Status](https://travis-ci.org/infoproject/info.svg?branch=master)](https://travis-ci.org/infoproject/info) [![Code Climate](https://codeclimate.com/github/infoproject/info/badges/gpa.svg)](https://codeclimate.com/github/infoproject/info) [![Test Coverage](https://codeclimate.com/github/infoproject/info/badges/coverage.svg)](https://codeclimate.com/github/infoproject/info/coverage) [![Issue Count](https://codeclimate.com/github/infoproject/info/badges/issue_count.svg)](https://codeclimate.com/github/infoproject/info)
+
 
 Development process
 ===========================
@@ -35,13 +35,13 @@ labeled 'stale'.
 Building info
 ===========================
 
-See [doc/readme-qt.rst](https://github.com/infoproject/info/blob/master/doc/readme-qt.rst) for instructions on building **appcoin QT** | *the intended-for-end-users, nice-graphical-interface, reference implementation of infoCash.*
+See [doc/readme-qt.rst 
 
-See [doc/build-msw.txt](https://github.com/infoproject/info/blob/master/doc/build-msw.txt) for instructions on building **appcoind (Windows)** | *the intended-for-services, no-graphical-interface, reference implementation of infoCash.*
+See [doc/build-msw.txt] 
 
-See [doc/build-osx.txt](https://github.com/infoproject/info/blob/master/doc/build-osx.txt) for instructions on building **appcoind (Mac)**
+See [doc/build-osx.txt](
 
-See [doc/build-unix.txt](https://github.com/infoproject/info/blob/master/doc/build-unix.txt) for instructions on building **appcoind (UNIX)**
+See [doc/build-unix.txt]
 
 
-> For guides and technical documentation please refer to [doc.infoproject.io (en)](https://infoproject.io/en/documentation)
+
