@@ -123,7 +123,7 @@ int main(int argc, char *argv[])
     QTextCodec::setCodecForCStrings(QTextCodec::codecForTr());
 #endif
 
-    Q_INIT_RESOURCE(shadow);
+    Q_INIT_RESOURCE(appc);
     QApplication app(argc, argv);
     
     // Do this early as we don't want to bother initializing if we are just calling IPC
@@ -143,7 +143,7 @@ int main(int argc, char *argv[])
     {
         // This message can not be translated, as translation is not initialized yet
         // (which not yet possible because lang=XX can be overridden in bitcoin.conf in the data directory)
-        QMessageBox::critical(0, "Shadow",
+        QMessageBox::critical(0, "appc",
                               QString("Error: Specified data directory \"%1\" does not exist.").arg(QString::fromStdString(mapArgs["-datadir"])));
         return 1;
     }
@@ -151,12 +151,12 @@ int main(int argc, char *argv[])
 
     // Application identification (must be set before OptionsModel is initialized,
     // as it is used to locate QSettings)
-    app.setOrganizationName("The Shadow Project");
+    app.setOrganizationName("The appc Project");
     app.setOrganizationDomain("appcoin.info");
     if(GetBoolArg("-testnet")) // Separate UI settings for testnet
         app.setApplicationName("Shadow-testnet");
     else
-        app.setApplicationName("Shadow");
+        app.setApplicationName("appc");
 
     // ... then GUI settings:
     OptionsModel optionsModel;
@@ -260,7 +260,7 @@ int main(int argc, char *argv[])
                 }
                 
                 // Now that initialization/startup is done, process any command-line
-                // shadow: URIs
+                // appc: URIs
                 QObject::connect(paymentServer, SIGNAL(receivedURI(QString)), &window, SLOT(handleURI(QString)));
                 QTimer::singleShot(100, paymentServer, SLOT(uiReady()));
 

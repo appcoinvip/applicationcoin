@@ -126,12 +126,13 @@ public:
         genesis.nVersion = 1;
         genesis.nTime    = GENESIS_BLOCK_TIME;
 
-        vSeeds.push_back(CDNSSeedData("104.200.131.245",  "104.200.131.245"));
-        vSeeds.push_back(CDNSSeedData("185.61.151.178",  "185.61.151.178"));
-        vSeeds.push_back(CDNSSeedData("192.169.6.165",  "192.169.6.165"));
-        vSeeds.push_back(CDNSSeedData("121.41.50.30",  "121.41.50.30"));
-        vSeeds.push_back(CDNSSeedData("103.240.203.40",  "103.240.203.40"));
-        vSeeds.push_back(CDNSSeedData("139.224.40.188",  "139.224.40.188"));
+        vSeeds.push_back(CDNSSeedData("47.52.46.158", "47.52.46.158"));
+        vSeeds.push_back(CDNSSeedData("121.41.50.30", "121.41.50.30"));
+        vSeeds.push_back(CDNSSeedData("139.224.40.188", "139.224.40.188"));
+
+        vSeeds.push_back(CDNSSeedData("106.15.228.116", "106.15.228.116"));
+        vSeeds.push_back(CDNSSeedData("121.41.50.30", "121.41.50.30"));
+        vSeeds.push_back(CDNSSeedData("139.224.40.188", "139.224.40.188"));
     }
     virtual const CBlock& GenesisBlock() const { return genesis; }
     virtual const std::vector<CAddress>& FixedSeeds() const {

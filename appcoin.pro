@@ -28,7 +28,7 @@ greaterThan(QT_MAJOR_VERSION, 4) {
 #    BOOST_INCLUDE_PATH, BOOST_LIB_PATH, BDB_INCLUDE_PATH,
 #    BDB_LIB_PATH, OPENSSL_INCLUDE_PATH and OPENSSL_LIB_PATH respectively
 
-BOOST_LIB_SUFFIX=-mgw49-mt-s-1_57
+
 
 OBJECTS_DIR = build
 MOC_DIR = build
@@ -53,7 +53,7 @@ android {
 
     QT += widgets webkitwidgets
 }
-    RESOURCES = shadow.qrc
+    RESOURCES = appc.qrc
 
 build_macosx64 {
     QMAKE_TARGET_BUNDLE_PREFIX = co.appcoin
@@ -63,18 +63,6 @@ build_macosx64 {
     QMAKE_LFLAGS += -arch x86_64 -stdlib=libc++
 }
 build_win32 {
-BOOST_LIB_SUFFIX=-mgw49-mt-s-1_57
-    BOOST_INCLUDE_PATH=c:/deps/boost_1_57_0
-    BOOST_LIB_PATH=C:/deps/boost_1_57_0/stage/lib
-
-    BDB_INCLUDE_PATH=c:/deps/db-4.8.30.NC/build_unix
-    BDB_LIB_PATH=c:/deps/db-4.8.30.NC/build_unix
-    OPENSSL_INCLUDE_PATH=c:/deps/openssl-1.0.1l/include
-    OPENSSL_LIB_PATH=c:/deps/openssl-1.0.1l/lib/
-    QRENCODE_INCLUDE_PATH=C:/deps/qrencode-3.4.4
-    QRENCODE_LIB_PATH=C:/deps/qrencode-3.4.4/.libs
-    MINIUPNPC_INCLUDE_PATH=c:/deps/miniupnpc
-    MINIUPNPC_LIB_PATH=c:/deps/miniupnpc
 
 
         #USE_BUILD_INFO = 1
@@ -395,7 +383,7 @@ OTHER_FILES += \
 # platform specific defaults, if not overridden on command line
 isEmpty(BOOST_LIB_SUFFIX) {
     macx:BOOST_LIB_SUFFIX = -mt
-    windows:BOOST_LIB_SUFFIX = -mt
+    windows:BOOST_LIB_SUFFIX =-mt
 }
 
 isEmpty(BOOST_THREAD_LIB_SUFFIX) {
@@ -442,8 +430,8 @@ macx:OBJECTIVE_SOURCES += src/qt/macdockiconhandler.mm \
                           src/qt/macnotificationhandler.mm
 macx:LIBS += -framework Foundation -framework ApplicationServices -framework AppKit
 macx:DEFINES += MAC_OSX MSG_NOSIGNAL=0
-macx:ICON = src/qt/res/icons/shadow.icns
-macx:TARGET = "Shadow"
+macx:ICON = src/qt/res/icons/appc.icns
+macx:TARGET = "appc"
 macx:QMAKE_CFLAGS_THREAD += -pthread
 macx:QMAKE_LFLAGS_THREAD += -pthread
 macx:QMAKE_CXXFLAGS_THREAD += -pthread
